@@ -11,11 +11,12 @@
 
     <p><%= startingContent %></p>
 
-    <%= console.log(posts); %>
+    <!-- <%= console.log(posts); %>  -->
 
-    <% for(let i = 0; i<posts.length; i++) { %>
-      <% console.log(posts[i].name); %>
-    <% }; %>
+    <% posts.forEach(function(post) { %>
+    <p><%=post.name%></p>
+    <button type="submit" name="devour">Devour It</button>
+    <% }) %>
 
     <form class="" action="/" method="post">
       <input type="text" name="burgerName" />

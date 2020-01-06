@@ -17,6 +17,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const posts = [];
+const newPosts = [];
 
 app.set("view engine", "ejs");
 
