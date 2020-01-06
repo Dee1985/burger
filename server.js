@@ -16,10 +16,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+const posts = [];
+
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("orders", { startingContent: homeStartingContent });
+  res.render("orders", { startingContent: homeStartingContent, posts: posts });
+  // console.log(posts);
+});
+
+app.post("/", function(req, res) {
+  // console.log(req.body.burgerName);
+  const post = {
+    name: req.body.burgerName
+  };
+  posts.push(post);
 });
 
 // Starts the server to begin listening
