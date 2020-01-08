@@ -16,8 +16,10 @@ $(document).ready(function() {
       }
     }
   });
+
   $(document).on("click", ".devour", function() {
     console.log("you got clicked");
+
     $.ajax({
       url: "/update/" + $(this).attr("name"),
       type: "PUT"
