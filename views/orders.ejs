@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Eat da Burgers</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .eaten {
+        width: 50%;
+        margin-left: 50%;
+      }
+    </style>
   </head>
   <body>
     <h1>Eat da Burgers!</h1>
 
-    <p><%= startingContent %></p>
-
-    <!-- <%= console.log(posts); %>  -->
-
-    <% posts.forEach(function(post) { %>
-    <p><%=post.name%></p>
-    <button type="submit" name="devour">Devour It</button>
-    <% }) %>
-
-    <form class="" action="/" method="post">
+    <form class="form" action="/" method="post">
       <input type="text" name="burgerName" />
       <button type="submit" name="button">Submit</button>
     </form>
+    <div class="eaten"></div>
+    <div id="orders"></div>
+
+    <script src="./assets/orders.js"></script>
   </body>
 </html>
