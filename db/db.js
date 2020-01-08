@@ -5,7 +5,8 @@ const connection = mysql.createConnection({
   port: 3306,
   user: "gth62dmtre4psth7",
   password: "ksr1mmx2ag4md0io",
-  database: "tuy70od0o65ain69"
+  database: "tuy70od0o65ain69",
+  use_env_variable: "JAWSDB_URL"
 });
 
 connection.connect(function(err) {
