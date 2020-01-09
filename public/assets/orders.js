@@ -25,7 +25,7 @@ $(document).ready(function() {
       type: "PUT"
     }).then(function(data) {
       console.log(data);
-      window.location.reload();
+      // window.location.reload();
     });
   });
 });
