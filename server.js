@@ -5,9 +5,6 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const connection = require("./db/db.js");
 
-const homeStartingContent =
-  "Add a new burger to the menu and click the submit button.";
-
 const app = express();
 const PORT = process.env.PORT || 5500;
 

@@ -25,7 +25,22 @@ $(document).ready(function() {
       type: "PUT"
     }).then(function(data) {
       console.log(data);
-      // window.location.reload();
+      window.location.reload();
+    });
+  });
+
+  $(document).on("click", "#saveBurger", function() {
+    console.log("you got clicked");
+
+    const newBurger = { burgerName: $("#burgerName").val() };
+
+    $.ajax({
+      url: "/",
+      type: "POST",
+      data: newBurger
+    }).then(function(data) {
+      console.log(data);
+      window.location.reload();
     });
   });
 });
